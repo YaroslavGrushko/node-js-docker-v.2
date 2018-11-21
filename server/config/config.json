@@ -1,0 +1,23 @@
+{
+    "port": 5000,
+    "mongoose": {
+        "uri": "mongodb://my-mongodb/webcams",
+        "options": {
+            "keepAlive": 1,
+            "useNewUrlParser": true
+        }
+    },
+    "log": {
+        "error-file": "error.log",
+        "info-file": "combined.log",
+        "default-level": "info",
+        "lebel": "right meow!",
+        "format": {
+            "timestamp": "false",
+            "label": "true",
+            "level": "false",
+            "message": "true"
+        }
+
+    }
+}
