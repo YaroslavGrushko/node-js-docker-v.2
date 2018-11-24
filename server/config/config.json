@@ -7,6 +7,10 @@
             "useNewUrlParser": true
         }
     },
+    "my-mongo": {
+        "mongo-url": "mongodb://my-mongodb",
+        "dbName": "webcams"
+    },
     "log": {
         "error-file": "error.log",
         "info-file": "combined.log",

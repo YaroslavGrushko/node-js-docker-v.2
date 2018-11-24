@@ -18,26 +18,20 @@ function StaticContent(current_request, current_response) {
 
 
     var staticContent = " ";
-    this.getStaticContent = function(type) {
+    this.getStaticContent = async function(type) {
         //return html content
         // staticContent = customers;
         // send response
         if (type == 'places') {
             //get PLACES from Db/getPlaces module
             log.info('get Data from Db/getPlaces module in async mode');
-            // OLD:>>>>
-            // var PLACESmod = require("./Db/getPlaces");
-            // PLACESmod(function(PLACES) {
-            //         // let's return PLACES
-            //         current_response.json(PLACES);
-            //     })
-            // OLD<<<<<<
             var getPlaces = require("./Db/getPlaces");
-            getPlaces().then((data) => {
-                console.log(data);
-                current_response.json(data);
-            });;
-
+            // getPLACES().then((data) => {
+            //     console.log("sending data to front");
+            //     current_response.json(data);
+            // });
+            var data = await getPlaces();
+            current_response.json(data);
         } else {
             // let's return customers
             if (type == 'customers') {
@@ -46,8 +40,6 @@ function StaticContent(current_request, current_response) {
             }
         }
     }
-
-
 }
 
 module.exports = StaticContent;

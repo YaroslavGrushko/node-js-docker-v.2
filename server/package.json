@@ -16,7 +16,7 @@
     "dependencies": {
         "concurrently": "^4.0.1",
         "express": "^4.16.3",
-        "mongodb": "^3.1.8",
+        "mongodb": "^3.1.0",
         "mongoose": "^5.3.3",
         "nconf": "^0.10.0",
         "path": "^0.12.7",
